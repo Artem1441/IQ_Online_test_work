@@ -30,7 +30,7 @@
       <header class="header">
           <div class="container">
               <div class="header_logo">
-                  <img src='img/logo.png' alt='logo'>
+                  <img src='logo.png' alt='logo'>
               </div>
               <div class="menu_btn">
                   <img src="img/menu.svg" alt="menu">
