@@ -33,7 +33,7 @@
                   <img src='logo.png' alt='logo'>
               </div>
               <div class="menu_btn">
-                  <img src="img/menu.svg" alt="menu">
+                  <img src="menu.svg" alt="menu">
               </div>
               <div class="header_info">
                   <div class="header_info_top-number">
