@@ -1,0 +1,319 @@
+/* reset.css */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* default settings */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* header */
+
+.header .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 120px;
+    align-items: center;
+}
+
+.header_info {
+    color: #eb5017;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+/* menu */
+
+.menu_list {
+    display: flex;
+    justify-content: space-between;
+    background: #231f20;
+    padding: 0 20px;
+}
+
+.menu_list .active {
+    background-color: #eb5017;
+}
+
+.menu_list_item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 42px;
+}
+
+.menu_list_item+.menu_list_item {
+    border-left: 1px solid #eb5017;
+}
+
+.menu_list_item-link {
+    color: #fff;
+}
+
+/* breadcrumb */
+
+.breadcrumb {
+    margin: 20px;
+}
+
+.breadcrumb .container {
+    display: flex;
+}
+
+.breadcrumb_item:first-child {
+    margin-left: 25px;
+}
+
+.breadcrumb_item {
+    position: relative;
+    margin-right: 12px;
+}
+
+.breadcrumb_item a {
+    text-decoration: underline;
+}
+
+.breadcrumb_item a:after {
+    content: '-';
+    position: absolute;
+    right: -8px;
+    top: 0;
+}
+
+/* I'll need to paste calc class here */
+
+.calc {
+    flex-grow: 1;
+}
+
+.calc_wrapper {
+    background-color: #f2f2f2;
+    padding: 20px;
+    max-width: 650px;
+}
+
+.calc_title {
+    color: #eb5017;
+    font-size: 30px;
+    line-height: 32px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+.calc_inputs_block {
+    margin-top: 20px;
+    display: flex;
+    margin-left: 10px;
+}
+
+.calc_inputs_block_title {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    min-width: 180px;
+    margin-right: 30px;
+}
+
+.calc_inputs_block_input label {
+    font-size: 14px;
+}
+
+.calc_inputs_block_input_date {
+    width: 90px;
+}
+
+.calc_inputs_block_input_sumDeposit {
+    width: 90px;
+}
+
+.calc_inputs_block_input_time {
+    width: 90px;
+}
+
+.calc_inputs_block_input_replenishment label {
+    font-size: 14px;
+}
+
+.calc_inputs_block_input_sumReplenishment {
+    width: 90px;
+}
+
+.calc_inputs_block_range {
+    margin-left: 20px;
+}
+
+.calc_inputs_block_range_sum {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calc_btn {
+    color: #395306;
+    padding: 10px;
+    background: #b8ee36;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    margin: 20px 10px;
+}
+
+/* footer */
+
+.footer_list {
+    background-color: #231f20;
+    display: flex;
+    padding: 0 20px;
+    height: 45px;
+    align-items: center;
+}
+
+.footer_list_item {
+    margin-left: 20px;
+}
+
+.footer_list_item-link {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* media */
+
+@media (max-width: 920px) {
+    .menu_list {
+        display: none;
+    }
+    .menu_btn {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 20px 0;
+    }
+    .menu_list_item+.menu_list_item {
+        border-left: none;
+    }
+    .header_info {
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {
+    .footer_list_item-link {
+        font-size: 12px;
+    }
+    .footer_list {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 550px) {
+    .calc_inputs_block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .calc_inputs_block_title {
+        justify-content: start;
+    }
+    .calc_inputs_block_range {
+        margin-left: 0;
+    }
+    .calc_inputs_block_range_sum  {
+        max-width: 130px;
+    }
+    .calc_inputs_block_title {
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .calc_inputs_block_input_date {
+        width: 180px;
+    }
+    
+    .calc_inputs_block_input_sumDeposit {
+        width: 180px;
+    }
+    
+    .calc_inputs_block_input_time {
+        width: 180px;
+    }
+    
+    .calc_inputs_block_input_sumReplenishment {
+        width: 180px;
+    }
+    .breadcrumb_item:first-child {
+        margin-left: 0;
+    }
+    .footer_list {
+        height:  100px;
+        padding: 10px 0;
+    }
+    .calc_title {
+        margin-left: 0;
+    }
+    .calc_wrapper {
+        margin-bottom: 100px;
+    }
+}
