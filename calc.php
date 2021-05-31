@@ -1,9 +1,11 @@
 <?php
 $time = $_POST['time'] * 12;
-$sum = $_POST['sumDeposit'];
+$sum = (int)str_replace(' ', '', $_POST['sumDeposit']);
 $daysy = 365;
 $percent = 0.1;
-$summadd  = $_POST['sumAdd'];
+$summadd  = (int)str_replace(' ', '', $_POST['sumAdd']);
+$daysAverage = 365/12;
+
 if ($_POST['replenishment'] == 'yes') {
     if ($summadd  == '') $summadd = 0;
 } else {
@@ -11,6 +13,9 @@ if ($_POST['replenishment'] == 'yes') {
 }
 $res = $sum;
 for ($i = 0; $i < $time; $i++) {
-    $res += $res*0.1 + $summadd; 
+    // echo $res . '<br>';
+    // для проверки результата
+    $res +=  ($res + $summadd)*$daysAverage*$percent/$daysy; 
 }
-echo $res;
+echo round($res);
+
